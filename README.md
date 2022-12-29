@@ -6,7 +6,7 @@
 
 <img width="1047" alt="스크린샷 2022-12-28 오후 3 49 31" src="https://user-images.githubusercontent.com/114709620/209770654-0a217608-820a-4ddc-bcf9-cb02f0622ae7.png">
 
-⇢ 비대면 심리 치료로 우울감과 불안감을 조금이나마 덜 수 있는 심리 케어 AI 챗봇 구현 
+**⇢ 비대면 심리 치료로 우울감과 불안감을 조금이나마 덜 수 있는 심리 케어 AI 챗봇 구현**
 
 <img width="1158" alt="스크린샷 2022-12-28 오후 3 52 14" src="https://user-images.githubusercontent.com/114709620/209771578-30461e81-01b1-4e6f-8fdb-fcee25606e08.png">
 
@@ -107,44 +107,44 @@
 
 ---
 
-# 나. 데이터 예시 
+# 나. 데이터셋
   - 출처 : 
-    - AI Hub 웰니스 대화 스크립트 데이터셋
-    - AI Hub 감성 대화 말뭉치
-  
+    - [AI Hub 웰니스 대화 스크립트 데이터셋](https://aihub.or.kr/opendata/keti-data/recognition-laguage/KETI-02-006)
+    - [AI Hub 감성 대화 말뭉치](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=86)
+  - 질의 별 3개 내외의 답변 존재 
+  - 육체・정신적 불안감과 우울감을 담은 30,000개의 대화 쌍
   
   
 <img width="653" alt="스크린샷 2022-12-28 오후 4 04 18" src="https://user-images.githubusercontent.com/114709620/209772265-4fb47a0c-e6b2-49d1-af96-e234a74b5c09.png">
 
 
+<img width="208" alt="대화 내용의 범주 " src="https://user-images.githubusercontent.com/114709620/209914011-21a576ad-a10e-4b0d-b73d-784aad6bfe0c.png">
 
 
 
 ---
 
-# 다. 데이터 증강 방식
+# 다. 데이터 전처리
 
-#### 1. Augmentation - RI(Random Insertion): 감탄사와 의성어를 문장 내에 추가하는 방식
-
-       
-    ex) 나는 자전거 타는 것을 좋아한다. -> 와! 나는 자전거 타는 것을 좋아한다.
-   
+#### 1. 결측치 제거
+    - 답변이 NaN인 대화 쌍 제거 
         
-#### 2. Back-Translation
-
-
-    원본) 나는 자전거 타는 것을 좋아한다. 
-
-    한국어 -> 프랑스어) J'aime faire du vélo. 
-
-    프랑스어 -> 한국어) 저는 자전거 타는 것을 좋아해요.
-
-   위의 예와 같이 특정 문장을 다른 언어로 번역한 후 다시 한국어로 번역하여 의미는 같지만 형태가 다른 문장을 생성하는 방식
+#### 2. 맞춤법 교정
+    - py-hanspell(맞춤법 검사기) 사용
     
-#### 3. 외부 API 활용
+#### 3. 구두점 분리
+    - Tokenizing을 위해 구두점(.,?!)과 텍스트 분리
+    
+#### 4. 띄어쓰기 교정
+    - pykospacing 패키지 사용
+    
+    
+
+<img width="756" alt="스크린샷 2022-12-29 오후 3 56 44" src="https://user-images.githubusercontent.com/114709620/209915295-40d51cc9-8908-4854-a2a8-bf6b01a77f66.png">
+
+    
+    
  
-   크롤링한 데이터(출처: 네이버쇼핑, 올리브영)에 대해 NAVER CLOVA Sentiment API를 이용하여 Label을 'neutral'과 'negative'를 부여하는 방식
-    
 ---
 
 # 라. 주요 소스 코드
