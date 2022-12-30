@@ -1,17 +1,19 @@
 # Chatbot project   
   
-* [개요](#1.-개요-)  
+* [개요](#1.-개요)  
 * [개발 환경](#2.-개발-환경)  
-* [데이터셋](#3.-데이터셋)  
-* [모델 학습 및 예측](#4.-모델-학습-및-예측)  
-    * [Transformer](#classification-or-regression)
-    * [KoGPT2](#classification-or-regression)
-    * [KoBART](#data)
-* [데모](#demo)
-* [멤버](#contacts) 
-
-
-
+* [데이터셋](#3.-데이터셋)
+* [전처리](#4.-데이터-전처리)  
+* [모델 학습 및 예측](#5.-모델-학습-및-예측)  
+    * [Transformer](#5-1.-Transformer)
+    * [KoGPT2](#5-2.-GPT2)
+    * [KoBART](#5-3.-BART)
+* [모델 선정](#6.-모델-선정)
+* [데모](#7.-데모)  
+* [멤버](#8.-멤버)     
+  
+  
+  
   
 ## 1. 개요 
   
