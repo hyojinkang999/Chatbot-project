@@ -1,96 +1,31 @@
-# Chatbot project
+# Chatbot project   
+  
+* [개요](#1.-개요)  
+* [개발 환경](#2.-개발-환경)  
+* [데이터셋](#3.-데이터셋)  
+* [모델 학습 및 예측](#4.-모델-학습-및-예측)  
+    * [Transformer](#classification-or-regression)
+    * [KoGPT2](#classification-or-regression)
+    * [KoBART](#data)
+* [데모](#demo)
+* [멤버](#contacts) 
 
-## 개요 
-
-최근 5년(2017~2021년), 우울증과 불안 장애 진료 현황 분석 결과, 환자 수가 급증하는 추세 
-
-<img width="1047" alt="스크린샷 2022-12-28 오후 3 49 31" src="https://user-images.githubusercontent.com/114709620/209770654-0a217608-820a-4ddc-bcf9-cb02f0622ae7.png">
-
-**⇢ 비대면 심리 치료로 우울감과 불안감을 조금이나마 덜 수 있는 심리 케어 AI 챗봇 구현**
-
-<img width="1158" alt="스크린샷 2022-12-28 오후 3 52 14" src="https://user-images.githubusercontent.com/114709620/209771578-30461e81-01b1-4e6f-8fdb-fcee25606e08.png">
 
 
----
+  
+## 1. 개요 
+  
+최근 5년(2017~2021년), 우울증과 불안 장애 진료 현황 분석 결과, 환자 수가 급증하는 추세   
+  
+<img width="500" alt="스크린샷 2022-12-28 오후 3 49 31" src="https://user-images.githubusercontent.com/114709620/209770654-0a217608-820a-4ddc-bcf9-cb02f0622ae7.png">
+  
+**⇢ 비대면 심리 치료로 우울감과 불안감을 조금이나마 덜 수 있는 심리 케어 AI 챗봇 구현**  
+  
+<img width="500" alt="스크린샷 2022-12-28 오후 3 52 14" src="https://user-images.githubusercontent.com/114709620/209771578-30461e81-01b1-4e6f-8fdb-fcee25606e08.png">
+  
 
-## 코드 정리
-
-<table>
-    <thead>
-        <tr>
-            <th>목록</th>
-            <th>파일명</th>
-            <th>설명</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan=3>Data 만들기</td>
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/Data_Augmentation.ipynb">Data_Augmentation.ipynb</a>
-            </td>
-            <td> Random_Insertion, Random_Swap, Random_Deletion Code</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/Back_Translation.ipynb">Back_Translation.ipynb</a>                
-            <td> Back_Translation Code</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/MakeData_with_API.ipynb">MakeData_with_API.ipynb</a>     
-            <td> Naver Open API를 이용하여 데이터의 라벨을 달아주는 Code </td>
-        <tr>
-            <td>Model Training</td>
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/train.ipynb">train.ipynb</a>     
-            <td> Model과 Data를 불러와 학습시키는 Code </td>
-        </tr>
-        <tr>
-            <td>Prediction</td>
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/test.ipynb">test.ipynb</a>     
-            <td> 학습 시켰던 Model의 Weights를 불러와서 새로운 데이터의 결과값을 예측하는 Code </td>
-        </tr>        
-        <tr>
-            <td rowspan=2>Model Ensemble</td>       
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/Manual_Ensemble.ipynb">Manual_Ensemble.ipynb</a>
-            <td> Prediction의 결과(jsonl파일)를 불러와서 Hard Voting하는 Code</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/Auto_Ensemble.ipynb">Auto_Ensemble.ipynb</a>
-            <td>다양한 조합의 결과를 도출하는 Ensemble code</td>
-        </tr>
-        <tr>
-            <td rowspan=4>구현코드</td>
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/test_and_ensemble_realizing.ipynb">test_and_ensemble_realizing.ipynb</a>
-            <td>최종 점수 재현 및 검증을 위한 코드</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/Organized_Inference.ipynb">Organized_Inference.ipynb</a>
-            <td>최종 재현 코드1</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/Organized_Realization.ipynb">Organized_Realization.ipynb</a>
-            <td>최종 재현 코드2</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="https://github.com/HappyBusDay/Korean_ABSA/blob/main/code/Organized_Inference_and_Ensemble.ipynb">Organized_Inference_and_Ensemble.ipynb</a>
-            <td>최종 재현 코드3</td>
-        </tr>
-        
-    </tbody>
-</table>
-
----
-
-# 가. 개발 환경
+  
+## 2. 개발 환경
 
      Google Colab Pro
      
@@ -105,49 +40,149 @@
      sentencepiece==0.1.97
 
 
----
-
-# 나. 데이터셋
-  - 출처 : 
+  
+## 3. 데이터셋  
+  
+  - 출처 :  
+  
     - [AI Hub 웰니스 대화 스크립트 데이터셋](https://aihub.or.kr/opendata/keti-data/recognition-laguage/KETI-02-006)
-    - [AI Hub 감성 대화 말뭉치](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=86)
+    - [AI Hub 감성 대화 말뭉치](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=86)  
+  
   - 질의 별 3개 내외의 답변 존재 
-  - 육체・정신적 불안감과 우울감을 담은 30,000개의 대화 쌍
+  - 육체・정신적 불안감과 우울감을 담은 30,000개의 대화 쌍    
   
   
-<img width="653" alt="스크린샷 2022-12-28 오후 4 04 18" src="https://user-images.githubusercontent.com/114709620/209772265-4fb47a0c-e6b2-49d1-af96-e234a74b5c09.png">
-
-
-<img width="208" alt="대화 내용의 범주 " src="https://user-images.githubusercontent.com/114709620/209914011-21a576ad-a10e-4b0d-b73d-784aad6bfe0c.png">
-
-
-
----
-
-# 다. 데이터 전처리
-
-#### 1. 결측치 제거
-    - 답변이 NaN인 대화 쌍 제거 
-        
-#### 2. 맞춤법 교정
-    - py-hanspell(맞춤법 검사기) 사용
+<img width="653" alt="스크린샷 2022-12-28 오후 4 04 18" src="https://user-images.githubusercontent.com/114709620/209772265-4fb47a0c-e6b2-49d1-af96-e234a74b5c09.png">  
+  
+  
+<img width="208" alt="대화 내용의 범주 " src="https://user-images.githubusercontent.com/114709620/209914011-21a576ad-a10e-4b0d-b73d-784aad6bfe0c.png">    
+  
+  
+  
+## 4. 데이터 전처리  
+  
+#### 4-1. 결측치 제거  
+    답변이 NaN인 대화 쌍 제거   
     
-#### 3. 구두점 분리
-    - Tokenizing을 위해 구두점(.,?!)과 텍스트 분리
+#### 4-2. 맞춤법 교정  
+    py-hanspell(맞춤법 검사기) 사용  
+  
+#### 4-3. 구두점 분리  
+    Tokenizing을 위해 구두점(.,?!)과 텍스트 분리    
+  
+#### 4-4. 띄어쓰기 교정  
+    pykospacing 패키지 사용      
+  
     
-#### 4. 띄어쓰기 교정
-    - pykospacing 패키지 사용
-    
-    
+  
+<img width="756" alt="스크린샷 2022-12-29 오후 3 56 44" src="https://user-images.githubusercontent.com/114709620/209915295-40d51cc9-8908-4854-a2a8-bf6b01a77f66.png">    
+  
+  
+  
+## 5. 모델 학습 및 예측    
 
-<img width="756" alt="스크린샷 2022-12-29 오후 3 56 44" src="https://user-images.githubusercontent.com/114709620/209915295-40d51cc9-8908-4854-a2a8-bf6b01a77f66.png">
+Model | Pretraind Model | Code
+-------|----------------|------|
+Transformer | Transformer 라이브러리  | code
+GPT2 | [skt/kogpt2-base-v2](https://huggingface.co/skt/kogpt2-base-v2) | code 
+BART | [cosmoquester/bart-ko-small](https://huggingface.co/cosmoquester/bart-ko-small) | code   
+  
+  
+  
+#### 5-1. Transformer  
+  
+- BART, BERT, GPT2의 기반이 되는 Encoder-Decoder Model  
+     
+    <img width="400" alt="스크린샷 2022-12-30 오후 3 17 50" src="https://user-images.githubusercontent.com/114709620/210040558-fb4d233d-7c60-405c-b45e-b9fdfd404cb9.png">    
+  
+  
+  
+  
+- 하이퍼 파라미터:  
+  
+        Num_layers = 6  
+        D_model = 512  
+        Num_heads = 8  
+        DFF = 1024  
+        Dropout = 0.2    
+  
+  
+  
+  
+- 예측 결과:  
+  
+    <img width="567" alt="스크린샷 2022-12-30 오후 3 21 39" src="https://user-images.githubusercontent.com/114709620/210040784-e221fe45-73f0-4907-b23e-cf93aea6cb29.png">    
+  
+  
+  
+#### 5-2. GPT2  
+  
+- 순차적 예측 학습을 통해 텍스트 생성에 강점을 지님  
+  
+    <img width="400" alt="스크린샷 2022-12-30 오후 3 22 35" src="https://user-images.githubusercontent.com/114709620/210040830-c0e60491-a599-4ffc-b5a7-a2f1c552943d.png">    
+   
+  
+  
+- Pretrained model: "skt/kogpt2-base-v2"  
+  
+  
+  
+  
+- 하이퍼 파라미터:  
+  
+        do_sample = True    
+        top_p = 0.92  
+        top_k = 3  
+        temperature = 0.8  
+  
+  
+  
+  
+- 예측 결과:  
+  
+    <img width="567" alt="스크린샷 2022-12-30 오후 3 25 03" src="https://user-images.githubusercontent.com/114709620/210040983-64e6e012-cc73-4699-846c-4987f322d55a.png">      
+  
+    <img width="567" alt="스크린샷 2022-12-30 오후 3 25 34" src="https://user-images.githubusercontent.com/114709620/210041012-17689509-ae1c-4360-b5ba-92a3f49d7c55.png">      
+      
+    
+  
+#### 5-3. BART  
+  
+- BERT와 GPT2를 합친 denoising auto-encoder이므로 문장생성에 용이    
+  
+    <img width="270" alt="스크린샷 2022-12-30 오후 3 28 18" src="https://user-images.githubusercontent.com/114709620/210041227-44ffb62f-10b9-4226-9837-fd9fa8642360.png">  
 
-    
-    
+  
+  
  
----
+- Pretrained model: "cosmoquester/bart-ko-small"  
+  
+  
+  
+  
+- 예측 결과    
+  
+    <img width="567" alt="스크린샷 2022-12-30 오후 3 28 59" src="https://user-images.githubusercontent.com/114709620/210041313-22587a7f-aa63-4467-9eda-a345410efcf0.png">    
+  
+  
+  
+## 6. 모델 비교   
+ 
+- Text generation task이기 때문에 동일한 단어 및 순서 기준으로 판단하는 정량 지표는 적합하지 않음 
+- 질문과 답변의 정합성, 구체성 등을 고려한 정성 평가 수행 결과, KoGPT2 채택   
+  
+    
+  <img width="567" alt="스크린샷 2022-12-30 오후 3 57 03" src="https://user-images.githubusercontent.com/114709620/210043307-fefe79d0-b556-4a74-9774-2251a37e2f73.png">
 
-# 라. 주요 소스 코드
+  
+
+## 7. 
+
+
+
+
+  
+---
 
 - ## Model Load: Hugging Face에서 Pre-Trained Model 불러오기 ( pip install transformers )
    
