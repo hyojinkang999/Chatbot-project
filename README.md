@@ -1,6 +1,6 @@
 # Chatbot project   
   
-* [개요](#1.-개요)  
+* [개요](#1)  
 * [개발 환경](#2.-개발-환경)  
 * [데이터셋](#3.-데이터셋)
 * [전처리](#4.-데이터-전처리)  
@@ -9,7 +9,7 @@
     * [KoGPT2](#5-2.-GPT2)
     * [KoBART](#5-3.-BART)
 * [모델 선정](#6.-모델-선정)
-* [데모](#7.-데모)  
+* [Demo](#7.-Demo)  
 * [멤버](#8.-멤버)     
   
   
@@ -21,7 +21,7 @@
   
 <img width="500" alt="스크린샷 2022-12-28 오후 3 49 31" src="https://user-images.githubusercontent.com/114709620/209770654-0a217608-820a-4ddc-bcf9-cb02f0622ae7.png">
   
-**⇢ 비대면 심리 치료로 우울감과 불안감을 조금이나마 덜 수 있는 심리 케어 AI 챗봇 구현**  
+**⇢ 비대면 심리 치료로 우울감과 불안감을 조금이나마 덜고자 심리 케어 AI 챗봇 구현**  
   
 <img width="500" alt="스크린샷 2022-12-28 오후 3 52 14" src="https://user-images.githubusercontent.com/114709620/209771578-30461e81-01b1-4e6f-8fdb-fcee25606e08.png">
   
@@ -168,18 +168,37 @@ BART | [cosmoquester/bart-ko-small](https://huggingface.co/cosmoquester/bart-ko-
   
   
   
-## 6. 모델 비교   
+## 6. 모델 선정   
  
 - Text generation task이기 때문에 동일한 단어 및 순서 기준으로 판단하는 정량 지표는 적합하지 않음 
-- 질문과 답변의 정합성, 구체성 등을 고려한 정성 평가 수행 결과, KoGPT2 채택   
+- 질문과 답변의 정합성, 구체성 등을 고려한 정성 평가 수행 결과, **KoGPT2 채택**   
   
     
   <img width="567" alt="스크린샷 2022-12-30 오후 3 57 03" src="https://user-images.githubusercontent.com/114709620/210043307-fefe79d0-b556-4a74-9774-2251a37e2f73.png">
 
   
 
-## 7. 
+## 7. Demo  
+  
+```python
+!pip install gradio
 
+import gradio as gr
+
+iface = gr.Interface(
+    fn = return_answer_by_chatbot,    # inference 함수명 입력
+    inputs = gr.inputs.Textbox(lines = 1, placeholder = "힐링이에게 하고싶은 말을 적으세요."),
+    outputs = "text")
+iface.launch()  
+```    
+    
+  
+  
+<img width="1173" alt="스크린샷 2022-12-30 오후 5 05 59" src="https://user-images.githubusercontent.com/114709620/210048461-a33cdaaf-8e43-494f-91b3-a07aac919951.png">
+
+
+
+## 8. 멤버
 
 
 
