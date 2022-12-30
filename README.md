@@ -30,7 +30,7 @@
   
 ## 2. 개발 환경
 
-     Google Colab Pro
+     Google Colab Pro+
      
      huggingface-hub==0.10.1
      datasets==2.6.1
