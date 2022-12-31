@@ -198,7 +198,15 @@ iface.launch()
 
 
 
-## 8. 멤버
+## 8. 멤버  
+  
+멤버 | 역할 
+|---|----|
+강효진 (khj94111@gmail.com) | 전처리, Transformer 학습, KoGPT2 학습, 발표 |
+오혜인 (gpdls741@naver.com) | Transformer 학습, KoGPT2 학습, PPT |
+유한솔 (banryu115@gmail.com ) | KoGPT2 학습, API 구현, PPT |
+이훈석 (gpdls741@naver.com) | KoGPT2 학습, API 구현, PPT |
+정효제 (gpdls741@naver.com) | KoGPT2 학습, KoBART 학습, PPT |
 
 
 
