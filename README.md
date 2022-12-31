@@ -1,40 +1,21 @@
 # Chatbot project   
   
 * [개요](#1-개요)  
-* [개발 환경](#2.-개발-환경)  
-* [데이터셋](#3.-데이터셋)
-* [전처리](#4.-데이터-전처리)  
-* [모델 학습 및 예측](#5.-모델-학습-및-예측)  
-    * [Transformer](#5-1.-Transformer)
-    * [KoGPT2](#5-2.-GPT2)
-    * [KoBART](#5-3.-BART)
-* [모델 선정](#6.-모델-선정)
-* [Demo](#7.-Demo)  
-* [멤버](#8.-멤버)     
+* [개발 환경](#2-개발-환경)  
+* [데이터셋](#3-데이터셋)
+* [전처리](#4-데이터-전처리)  
+* [모델 학습 및 예측](#5-모델-학습-및-예측)  
+    * [Transformer](#5-1-transformer)
+    * [KoGPT2](#5-2-gpt2)
+    * [KoBART](#5-3-bart)
+* [모델 선정](#6-모델-선정)
+* [Demo](#7-demo)  
+* [멤버](#8-멤버)     
 
  
-* [KoGPT2 (한국어 GPT-2) Ver 2.0](#kogpt2-한국어-gpt-2-ver-20)
-  * [Tokenizer](#tokenizer)
-  * [Model](#model)
-    * [Performances](#performances)
-    * [Classification or Regression](#classification-or-regression)
-  * [Data](#data)
-  * [Demo](#demo)
-  * [User Contributed Examples](#user-contributed-examples)
-  * [Related press releases](#related-press-releases)
-  * [Contacts](#contacts)
-  * [License](#license)
 
-
-
-## KoGPT2 (한국어 GPT-2) Ver 2.0
-- 비
-- ㅇ
-- 4
-
-  
     
-## 1.개요 
+## 1. 개요 
   
 최근 5년 간(2017~2021년) 우울증과 불안 장애 진료 현황 분석 결과, 환자 수가 급증하는 추세   
   
