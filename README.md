@@ -51,7 +51,8 @@
     - [AI Hub 감성 대화 말뭉치](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=86)  
   
   - 질의 별 3개 내외의 답변 존재 
-  - 육체・정신적 불안감과 우울감을 담은 30,000개의 대화 쌍    
+  - 육체・정신적 불안감과 우울감을 담은 30,000개의 대화 쌍   
+  - 데이터 중 일부 데이터 랜덤하게 픽킹
   
   
 <img width="653" alt="스크린샷 2022-12-28 오후 4 04 18" src="https://user-images.githubusercontent.com/114709620/209772265-4fb47a0c-e6b2-49d1-af96-e234a74b5c09.png">  
