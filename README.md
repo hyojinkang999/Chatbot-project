@@ -203,7 +203,7 @@ iface.launch()
   
 멤버 | 역할 
 |---|----|
-강효진 (khj94111@gmail.com) | 데이터 가공(추출 및 정제), 전처리, Transformer 학습, Transformer KoGPT2 학습, 발표 |
+강효진 (khj94111@gmail.com) | 데이터 전처리, Transformer 학습, Transformer KoGPT2 학습, 발표 |
 오혜인 (gpdls741@naver.com) | 데이터 분석, Transformer 학습, Transformer KoGPT2 학습, PPT |
 유한솔 (banryu115@gmail.com) | 데이터 수집 및 분석, Pytorch, Transformer KoGPT2 학습, API 구현, PPT |
 이훈석 (oon.noon.ai@gmail.com) | Transformer KoGPT2 학습, API 구현, PPT |
